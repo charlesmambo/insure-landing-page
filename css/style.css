@@ -91,10 +91,11 @@ nav {
     right: 50px;
 }
 
-.hamburger-icon i {
+.hamburger-icon img {
     cursor: pointer;
     display: none;
     font-size: 22px;
+    width: 30px;
 }
 
 
@@ -104,7 +105,7 @@ nav {
     display: flex;
     justify-content: space-between;
     gap: 60px;
-    padding: 80px 150px;
+    padding: 1% 8%;
 }
 
 .divider, .divider-2 {
@@ -125,18 +126,19 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 45%;
+    width: 50%;
+    min-width: 300px;
 }
 
 .main-image-container {
-    width: 45%;
+    width: 50%;
+    min-width: 300px;
     position: relative;
-    top: 150px;
+    top: 180px;
 }
 
 .main-image-container img {
     width: 100%;
-   
 }
 
 
@@ -144,7 +146,7 @@ nav {
 .heading-container h1 {
     color: hsl(0, 0%, 98%);
     font-family: 'DM Serif Display', serif;
-    font-size: 75px;
+    font-size: 400%;
     letter-spacing: 6px;
     line-height: 1.2;
     margin-bottom: 0;
@@ -203,22 +205,23 @@ nav {
 
 /* FEATURES SECTION */
 #features {
-    padding: 80px 150px;
-    margin-bottom: 50px; 
+    padding: 4% 8%;
+    margin: 40px 0; 
+    position: relative;
 }
 
 .feature-sub-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .feature-content {
-    position: relative;
-    top: 80px;
+    margin: 40px 0;
     width: 450px;
 }
 .feature-content img {
-    width: 70px;
+    width: 60px;
 }
 
 h2 {
@@ -247,16 +250,17 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
-    padding: 80px 150px;
+    margin-top: 20px;
+    padding: 4% 8%;
     position: relative;
-    top: 100px;
+    top: 20px;
+    overflow: hidden;
 }
 
 .about-us-section h3 {
     color: hsl(0, 0%, 98%);
     font-size: 40px;
-    margin-bottom: 18px;
+    margin-bottom: 13px;
 }
 
 #about-us-btn {
@@ -272,13 +276,13 @@ p {
 }
 
 .about-us-right-background {
-    height: 310px;
-    width: 300px;
+    height: 20vh;
+    width: 30%;
     background-image: url(/images/bg-pattern-intro-right-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    right: 0;
+    right: 0px;
 }
 
 /* FOOTER SECTION */
@@ -289,8 +293,12 @@ p {
     overflow: hidden;
 }
 
+.footer-logo-img-container{
+   width: 200px;
+}
+
 .footer-sub-container {
-    padding: 80px 150px;
+    padding: 4% 8%;
 }
 .social-icon-container {
     display: flex;
@@ -299,6 +307,7 @@ p {
 
 .footer-navbar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between; 
 }
 
@@ -338,6 +347,7 @@ h4 {
 
 .footer-item-list-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 40px;
 }
@@ -366,7 +376,101 @@ h4 {
         display: none;
     }
 
-    .hamburger-icon i {
+    .hamburger-icon img{
         display: block;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .header-section {
+        align-items: center;
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+
+    .main-image-container {
+        position: relative;
+        top: 0px;
+        bottom: 40px;
+    }
+    
+    .left-background {
+        display: none;
+    }
+    
+    .right-background {
+        display: none;
+    }
+    .about-us-section {
+        align-items: self-start;
+        flex-direction: column;
+        padding-bottom: 10%;
+    }
+
+
+    .about-us-right-background {
+       display: none;
+    }
+
+    #about-us-btn {
+        margin-top: 40px;
+        transform: rotate(0deg);
+    }
+
+    .footer-sub-container {
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+    .footer-logo-img-container img {
+        margin-bottom: 50px;
+    }
+    
+    .footer-bg-img {
+       display: none;
+    }
+    
+    h4 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    .find-out-heading {
+        font-size: 23px; 
+    }
+  }
+
+  @media only screen and (max-width: 975px) {
+    .heading-container h1 {
+        font-size: 300%;
+        
+    }
+    .header-section {
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+  }
+
+  @media only screen and (min-width: 540px) {
+    .main-image-container {
+       width: 95%;
+    }
+
+    .heading-container {
+        width: 95%;
+
+    }
+
+    .header-section {
+        padding-top: 6%;
+        padding-bottom: 6%;
     }
   }
